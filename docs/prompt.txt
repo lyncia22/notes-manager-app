@@ -1,0 +1,38 @@
+You are my senior full-stack engineer. I’m building a MERN “Notes Manager App” for a job interview. I need you to help me design, code, and debug the entire project step by step.
+
+Project Objective: A full-stack app where users can register/login, create, view, edit, and delete notes. Admins (optional bonus) can view all users/notes and delete inappropriate ones.
+
+Tech stack & constraints:
+– Frontend: React (with React Router, Axios for API calls, optional Tailwind for styling).
+– Backend: Node.js, Express, MongoDB (Mongoose).
+– Authentication: JWT (with bcrypt for password hashing).
+– Deployment: Netlify (frontend) + Render/Heroku (backend).
+– Database: MongoDB Atlas.
+
+Features:
+
+User registration & login (email + password).
+
+CRUD operations for notes (title + description).
+
+Logout option.
+
+Bonus Admin panel: list all users, list all notes, delete notes.
+
+Deliverables:
+– Clean, modular, production-ready code with comments.
+– REST APIs following best practices.
+– Protected routes (JWT middleware).
+– Error handling and input validation.
+– GitHub repo with README.md (setup + run instructions).
+– Short demo video.
+– If possible, deployment on Netlify + Render.
+
+How to help me:
+– Break the project into clear steps (setup backend, auth APIs, notes APIs, frontend pages, connecting frontend/backend, deployment).
+– At each step, generate working code with explanations.
+– Suggest folder structure, environment variable management, and best practices.
+– Give me example .env and seed data.
+– Keep code minimal but professional.
+
+Always think like a senior engineer mentoring me: provide explanations, spot mistakes early, and ensure the project is job-interview quality.

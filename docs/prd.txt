@@ -1,0 +1,109 @@
+Product Requirements Document (PRD)
+
+Here’s a structured PRD you can include in your repo or show in the interview:
+
+📚 Notes Manager App – PRD
+1. Objective
+
+Build a full-stack application (MERN) that allows users to register, login, and manage personal notes (CRUD). Optionally, provide an admin panel for monitoring users and moderating notes.
+
+2. Users & Roles
+
+Regular User
+
+Register/login with email + password
+
+Create, view, edit, and delete personal notes
+
+Logout
+
+Admin (Optional)
+
+View all registered users
+
+View all notes created by users
+
+Delete inappropriate notes
+
+3. Features & Requirements
+Authentication
+
+Register with email + password
+
+Secure password storage with bcrypt
+
+JWT-based authentication for protected APIs
+
+Persistent login on frontend
+
+Notes Management
+
+Add new note (title + description)
+
+View list of all notes (only own notes for regular users)
+
+Edit note (title or description)
+
+Delete note
+
+Admin Features (Bonus)
+
+List all users
+
+List all notes
+
+Delete notes
+
+4. Technical Requirements
+
+Frontend (React)
+
+Pages: Register/Login, Notes Dashboard
+
+React Router for navigation
+
+Axios for API communication
+
+Minimal but responsive UI (Tailwind optional)
+
+Backend (Node.js, Express, MongoDB)
+
+RESTful APIs:
+
+POST /api/auth/register → Register
+
+POST /api/auth/login → Login
+
+POST /api/notes → Create note
+
+GET /api/notes → Fetch all notes of logged-in user
+
+PUT /api/notes/:id → Update note
+
+DELETE /api/notes/:id → Delete note
+
+Middleware for authentication/authorization
+
+Error handling & input validation
+
+Database (MongoDB)
+
+Users collection (id, name, email, passwordHash, role)
+
+Notes collection (id, userId, title, description, createdAt, updatedAt)
+
+5. Deliverables
+
+GitHub repo with separate folders for frontend & backend
+
+README.md with setup instructions
+
+Short demo video (showing user flows + CRUD)
+
+(Preferred) Hosted live demo:
+
+Frontend → Netlify
+
+Backend → Render/Heroku
+
+DB → MongoDB Atlas
