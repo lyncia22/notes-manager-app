@@ -1,0 +1,35 @@
+/* Global aesthetic enhancements */
+:root {
+  --blob-a: 255, 99, 132;    /* pink */
+  --blob-b: 54, 162, 235;    /* sky */
+  --blob-c: 255, 206, 86;    /* amber */
+}
+
+/* Soft animated gradient blobs behind the app */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -10% -10% auto -10%;
+  height: 60vh;
+  background:
+    radial-gradient(40% 50% at 10% 20%, rgba(var(--blob-a), 0.20), transparent 60%),
+    radial-gradient(35% 45% at 80% 0%, rgba(var(--blob-b), 0.18), transparent 60%),
+    radial-gradient(30% 40% at 50% 60%, rgba(var(--blob-c), 0.15), transparent 60%);
+  filter: blur(40px) saturate(110%);
+  z-index: 0;
+  pointer-events: none;
+  animation: floaty 18s ease-in-out infinite alternate;
+}
+
+@keyframes floaty {
+  0% { transform: translateY(0) scale(1); opacity: 0.8; }
+  50% { transform: translateY(10px) scale(1.02); opacity: 0.85; }
+  100% { transform: translateY(-8px) scale(1.01); opacity: 0.8; }
+}
+
+/* Smoothen interactions */
+* { transition: color 120ms ease, background-color 120ms ease, border-color 120ms ease, box-shadow 160ms ease; }
+
+/* Ensure app content sits above decorative bg */
+#root > div { position: relative; z-index: 1; }
+
